@@ -3,18 +3,22 @@ import './App.css';
 import ColorPicker from './colorPicker';
 import Clock from './Clock';
 import ProfileForm from './profileForm';
+import {styles} from './styles';
 
 function App() {
   return (
     <div className="App">
+      
+      <header style={styles.lightStyles} className="App-header">
       <ColorPicker />
-      <header className="App-header">
-        <Clock />
         <ProfileForm />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Wazzup!
-        </p>
+        <h1>
+          J H Howell
+        </h1>
+        <h2>
+          Web Dev / Software Engineer
+        </h2>
         
       </header>
     </div>

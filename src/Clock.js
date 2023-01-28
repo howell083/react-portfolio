@@ -10,8 +10,9 @@ export default function Clock() {
         const intervalID = setInterval(() => {
             setTime(date)}, oneSecond);
         return () => {clearInterval(intervalID)};
-    });
-  
-  return <div>{time.toLocaleTimeString()}</div>;
+    }, []);
+  //let localTime = time.toLocaleTimeString();
+  console.log(time.toLocaleTimeString())
+  return <div>{time}</div>;
   
 } 

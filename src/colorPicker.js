@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 const colorNames = ['Aquamarine', 'BlueViolet', 'Chartreuse', 'CornflowerBlue', 'Thistle', 'SpringGreen', 'SaddleBrown', 'PapayaWhip', 'MistyRose'];
-const coffeeColors = [{green: '#9EB599'}, {light: '#683C2C'}, {city: '#4C352D'}, {vienna: '#352926'}, {italian: '#141212'}];
+//const coffeeColors = [{green: '#9EB599'}, {light: '#683C2C'}, {city: '#4C352D'}, {vienna: '#352926'}, {italian: '#141212'}];
 export default function ColorPicker() {
-  const [color, setColor] = useState('Tomato');
+  const [color, setColor] = useState('#4C352D');
 
  const divStyle = {backgroundColor: color};
 
