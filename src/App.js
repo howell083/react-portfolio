@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
 //import ColorPicker from './colorPicker';
 import ThemePicker from './components/ThemePicker';
-import Clock from './Clock';
+//import Clock from './Clock';
 import ProfileForm from './profileForm';
 import {styles} from './styles';
 
@@ -15,12 +15,15 @@ function App() {
     <div className="App">
       
       <header style={styleTheme} className="App-header">
+        
+        <div className='row'>
+          <ul>
+            <li><ThemePicker theme={theme} setTheme={setTheme} /></li>
+            <li><img src="profileSmall.jpg" alt="" /></li>
+          </ul>
+          
+          
 
-        <div style={{width: '48%'}}>
-        <ThemePicker theme={theme} setTheme={setTheme} />
-                <img style={{border: '3px solid #FFFDD0', borderRadius: '50%', maxWidth: 300}}src="profileSmall.jpg" alt="" />
-        </div>
-        <div style={{width: '48%'}}>
           <h1>
             J H Howell 
           </h1>
@@ -29,16 +32,17 @@ function App() {
           </h2>
         </div>
       </header>
-      <main>
+      <main style={styleTheme}>
         
-        <ProfileForm />
+        
             
 
             <aside className="sidebar">
                 
                     
                 <h3>Projects</h3>
-                
+                <button>Matching Coffee Beans</button>
+                <button>Inventory Management</button>
                 <p><a href="https://github.com/howell083">Github</a></p>
                 <p><a href="https://howell083.github.io">Github Pages</a></p>
                             
@@ -46,6 +50,7 @@ function App() {
                             
                 
             </aside>
+            
 
 
         </main>

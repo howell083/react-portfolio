@@ -6,8 +6,8 @@ const dark = {
 const light = {
     backgroundColor: '#9EB599',
     color: '#352926',
-    display: 'flex',
-    justifyContent: 'space-between'
+    
+
     
 }
 const medium = {
