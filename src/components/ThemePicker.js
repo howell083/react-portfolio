@@ -6,9 +6,9 @@ export default function ThemePicker(props) {
     
     return (
         <div>
-            <p>Selected Theme: {props.theme} Roast</p>
+            
             {themeNames.map((themeName)=>(
-                <button
+                <button 
                 onClick={() => props.setTheme(themeName)}
                 key={themeName}>
                     {themeName}

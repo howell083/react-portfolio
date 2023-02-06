@@ -30,8 +30,11 @@ html {
   color: white;
   padding-top: 0;
   margin-top: 0;
+  visibility: visible;
 }
-
+.visible {
+  visibility: hidden;
+}
 
 .App-link {
   color: #61dafb;
@@ -47,22 +50,35 @@ html {
 }
 .sidebar {
   padding: 30px 3px;
-  
+  left: -200px;
+  top: 11%;
   text-align: center;
-  width: 10em;
+  width: 11em;
   border: 3px solid black;
   border-radius: 12.5em;
-  
-  
+  position: absolute;
+  transition: 0.4s;
   background-color: #9EB599;
+  color: #141212;
 }
-img {
+.profileImage {
   border: 3px solid #FFFDD0; 
   border-radius: 50%;
   max-width: 300;
   
-  justify-items: right;
+  
   width: 28%;
+}
+.menuBar {
+  width: 50px;
+  position: absolute;
+  top: 3%;
+  left: 60px;
+  justify-self: left;
+}
+.change {
+  transform: translate(220px, 0);
+  visibility: visible;
 }
 li {
   
@@ -70,6 +86,22 @@ li {
   display: inline-block;
 }
 .row {
+  justify-content: space-evenly;
+  align-items: flex-start;
 
+}
+button {
+  background-color: #858566;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 10px;
+  margin: 5px 1px;
+  box-shadow: 0 5px #999;
+}
+button:hover {background-color: #3e8e41}
 
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
 }
