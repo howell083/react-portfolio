@@ -6,6 +6,7 @@ import ThemePicker from './components/ThemePicker';
 //import Clock from './Clock';
 //import ProfileForm from './profileForm';
 import {styles} from './styles';
+import NotTweeter from './containers/NotTweeter';
 
 function App() {
   const [theme, setTheme] = useState('Light');
@@ -17,8 +18,8 @@ function App() {
     sidebar.classList.toggle('change');
   }
   function swapView(){
-    const head = document.getElementById('head');
-    alert(head);
+    const head = document.getElementById('row');
+    
     head.classList.toggle('visible');
   }
   return (
@@ -26,7 +27,7 @@ function App() {
       <img className='menuBar' src='bars-medium.png' onClick={slide} alt='bars' />
       <header id='head' style={styleTheme} className="App-header">
      
-        <div className='row'>
+        <div id="row" className='row'>
         
         
           <div>
@@ -43,26 +44,19 @@ function App() {
           </h2>
           <img className="profileImage" src="profileSmall.jpg" alt="" />
         </div>
-        <div class="game">
-            <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
-
-            <script src="StartScene.js"></script>
-            <script src="GameScene.js"></script>
-            <script src="EndScene.js"></script>
-            <script src="game.js"></script>
-        </div>
+        <NotTweeter />
       </header>
       <main style={styleTheme}>
-        
+      
         
             
 
             <aside id='sidebar' className="sidebar">
                 
                     
-                <h3>Projects</h3>
-                <button onClick={swapView}>Matching Coffee Beans</button>
-                <button>Inventory Management</button>
+                <h3>Menu</h3>
+                <button onClick={swapView}>Profile</button>
+                <button onClick={swapView}>Not Tweeter</button>
                 <p><a href="https://github.com/howell083">Github</a></p>
                 <p><a href="https://howell083.github.io">Github Pages</a></p>
                 <ThemePicker theme={theme} setTheme={setTheme} />           

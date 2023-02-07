@@ -34,6 +34,7 @@ html {
 }
 .visible {
   visibility: hidden;
+  display: none;
 }
 
 .App-link {
@@ -104,4 +105,73 @@ button:active {
   background-color: #3e8e41;
   box-shadow: 0 1px #666;
   transform: translateY(4px);
+}
+
+
+
+input,
+button {
+ 
+  box-sizing: border-box;
+}
+
+input[type='submit'],
+button {
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+
+.Tweet {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 95%;
+}
+
+.Tweet h1:before {
+  content: '💭';
+  margin-right: 0.5em;
+}
+
+.AddThoughtForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AddThoughtForm input {
+  padding: 1.5rem;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.AddThoughtForm input[type='text'] {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  
+}
+
+.thoughts {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Thought {
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  width: auto;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.Thought .remove-button {
+  font-size: 80%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  background-color: red;
+}
+
+.Thought .remove-button:hover {
+  color: #fff;
+  background-color: #000;
 }
